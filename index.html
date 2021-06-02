@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue.js Learning Repository</title>
 
+    <link rel="stylesheet" href="style.css">
     <!-- Code from      vuejs.org/v2/guide/installation.html        -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script> 
+    <script src="https://unpkg.com/vue"></script> 
 </head>
 
 <body>
-    
+    <div id="vue-app"> <!-- Root Element - the element we want our Vue Instance to control -->
+        <h1> {{name}} </h1>
+    </div>  
+
+    <script src="script.js"></script>
 </body>
 </html>
