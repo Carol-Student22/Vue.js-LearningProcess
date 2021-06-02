@@ -10,5 +10,14 @@ new Vue({
   /// Stores the data for this Vue Instance [el] -- Object
   data: {
     name: "Shawn",
+    job: "Ninja",
+  },
+
+  /// Function -- Object
+  methods: {
+    ///Outputs a greeting - Function
+    greet: function (time) {
+      return "Good " + time;
+    },
   },
 });

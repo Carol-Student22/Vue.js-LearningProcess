@@ -13,7 +13,13 @@
 
 <body>
     <div id="vue-app"> <!-- Root Element - the element we want our Vue Instance to control -->
-        <h1> {{name}} </h1>
+        <h1> Name: {{name}} </h1>
+        <p>{{job}}</p>
+
+        <!-- greet is a fucntion thus need to be written with parenthesis -->
+        <h1>{{ greet() }}</h1>
+        <!-- Changing Parameter inside the parenthesis 0-->
+        <h1>{{greet('Afternoon')}}</h1>
     </div>  
 
     <script src="script.js"></script>
