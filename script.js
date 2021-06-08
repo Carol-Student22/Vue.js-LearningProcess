@@ -11,6 +11,9 @@ new Vue({
   data: {
     name: "Shawn",
     job: "Ninja",
+    website: "http://www.youtube.com",
+    websiteTag:
+      '<a href="http://www.youtube.com"> Another way of Using Data Binding</a>',
   },
 
   /// Function -- Object

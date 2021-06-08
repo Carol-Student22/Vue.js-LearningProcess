@@ -20,7 +20,23 @@
         <h1>{{ greet() }}</h1>
         <!-- Changing Parameter inside the parenthesis 0-->
         <h1>{{greet('Afternoon')}}</h1>
-    </div>  
+
+
+        <!-- Data Binding 
+                v-bind -> directive/instruction of Vue.Js to do something -->
+        <h1>Data Binding</h1>
+        <!-- Bind href to a dynamic data stored in vue instance -->
+        <a v-bind:href="website"> ~ Data Binding - Link to Youtube ~ </a>
+        <a :href="website"> ~ Adding Colons instead of Writing v-bind also works - Data Binding ~ </a>
+        <!-- v-bind also works with other codes/attributes -->
+        <input type="text" v-bind:value="name">
+        <!-- v-html -> binding to the html stored in data -->
+        <p v-html="websiteTag"></p>
+    </div>  <!-- End of vue-app -->
+
+    
+    
+
 
     <script src="script.js"></script>
 </body>
