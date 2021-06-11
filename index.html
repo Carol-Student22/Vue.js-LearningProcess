@@ -13,7 +13,41 @@
 
 <body>
     <div id="vue-app"> <!-- Root Element - the element we want our Vue Instance to control -->
+        <h1>Events</h1>
+        <!--v-on:_event (click, dblclick [double click], etc)=code [directive] - listens for the stated event to fire the stated code (js)
+        -->
+
+        <!--
+            Directly inputing the code(js)
+        <button v-on:click="age++">Add a Year - Direct Code</button>
+        <button v-on:click="age--">Subtract a Year - Direct Code</button>
+
+        <!- Storing the code in method - Vue expects to fire a function so there's no need to add parentheses  ->
+        <button v-on:click="add">Add a Year - Method</button>
+        <button v-on:click="subtract">Subtract a Year - Method</button>
+
+        -->
         
+
+        <!-- Double Click
+            Adding Parentheses passes on a parameter - need to add a value in method -->
+        <button v-on:dblclick="add(10)">Add 10 Years - DBLCLICK</button>
+        <button v-on:dblclick="subtract(10)">Subtract 10 Years - DBLCLICK</button>
+        <p>My age is {{ age }}</p>
+
+
+        <!-- Mouse Move Event - Tracts movement of the mouse within the div-->
+    <div id="canvas" v-on:mousemove="updateXY">
+        {{ x }}, {{ y }}
+    </div>
+
+    <!--
+        Shortcut: write @click or @dblclick than v-on:click or v-on:dblclick
+    -->
+
+
+
+
     </div>  <!-- End of vue-app -->
 
     
