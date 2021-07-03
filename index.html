@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +13,8 @@
 </head>
 
 <body>
-    <div id="vue-app"> <!-- Root Element - the element we want our Vue Instance to control -->
+    <div id="vue-app">
+        <!-- Root Element - the element we want our Vue Instance to control -->
         <h1>Events</h1>
         <!--v-on:_event (click, dblclick [double click], etc)=code [directive] - listens for the stated event to fire the stated code (js)
         -->
@@ -27,33 +29,47 @@
         <button v-on:click="subtract">Subtract a Year - Method</button>
 
         -->
-        
+
 
         <!-- Double Click
-            Adding Parentheses passes on a parameter - need to add a value in method -->
-        <button v-on:dblclick="add(10)">Add 10 Years - DBLCLICK</button>
+            Adding Parentheses passes on a parameter - need to add a value in method 
+            Event Modifier ~ add a period after the event to tell the event what to do
+                v-on:dblclick.once ==> only allows the button to be run once only
+        
+        -->
+        <button v-on:dblclick.once="add(10)">Add 10 Years - DBLCLICK</button>
         <button v-on:dblclick="subtract(10)">Subtract 10 Years - DBLCLICK</button>
         <p>My age is {{ age }}</p>
 
 
         <!-- Mouse Move Event - Tracts movement of the mouse within the div-->
-    <div id="canvas" v-on:mousemove="updateXY">
-        {{ x }}, {{ y }}
-    </div>
+        <div id="canvas" v-on:mousemove="updateXY">
+            {{ x }}, {{ y }}
+        </div>
 
-    <!--
+        <!-- Event modifier options (see Vue.js website for further info):
+                .stop
+                .prevent == prevents the event to occur 
+                .capture
+                .self
+                .once == allows the event to run once and once only 
+        -->
+        <a v-on:click.prevent="click" href="http://www.thenetninja.co.uk">The Net Ninja</a>
+
+        <!--
         Shortcut: write @click or @dblclick than v-on:click or v-on:dblclick
     -->
 
 
 
 
-    </div>  <!-- End of vue-app -->
+    </div> <!-- End of vue-app -->
 
-    
-    
+
+
 
 
     <script src="script.js"></script>
 </body>
+
 </html>
