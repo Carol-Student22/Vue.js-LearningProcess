@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js Learning Repository</title>
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Code from      vuejs.org/v2/guide/installation.html        -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+</head>
+
+<body>
+    <div id="vue-app">
+        <h1>Keyboard Events</h1>
+        <label>Name:</label>
+
+        <!--    .keyup (key board modifier - keeps track of what is typed on keyboard) == fires a function 
+            .enter == activates the event when enter is pressed
+            .alt.enter == only fires the function when alt & enter are both pressed
+    -->
+        <!-- <input type="text" v-on:keyup.enter="logName">
+        <label>Age:</label>
+        <input type="text" v-on:keyup.alt.enter="logAge"> -->
+
+        <!-- Two way Data binding-->
+        <input type="text" v-on:keyup="logName">
+        <label>Age:</label>
+        <input type="text" v-on:keyup.alt="logAge">
+
+
+    </div>
+
+
+    <script src="KeyboardEventScript.js"></script>
+</body>
+
+</html>
