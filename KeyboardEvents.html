@@ -25,10 +25,13 @@
         <label>Age:</label>
         <input type="text" v-on:keyup.alt.enter="logAge"> -->
 
-        <!-- Two way Data binding-->
-        <input type="text" v-on:keyup="logName">
+        <!-- Two way Data binding == when we enter something into an input field, it'll see and associate the input with the stated variable (data) and store the information within the data to be used or updated into the system/browser -->
+        <!-- v-model == attatches the stated input to the variable listed in data-->
+        <input type="text" v-model="name" />
+        <span>{{name}}</span>
         <label>Age:</label>
-        <input type="text" v-on:keyup.alt="logAge">
+        <input type="text" v-model="age" />
+        <span>{{age}}</span>
 
 
     </div>
